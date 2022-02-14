@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+# React-Filter-Category
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+This app is about a filter category using react.
 
 In the project directory, you can run:
 
