@@ -1,13 +1,29 @@
 import React from 'react';
 import Menu from './menuApi';
 import MenuCard from './MenuCard';
+import Navbar from './Navbar';
 import "./style.css";
+
+const uniqueList = [
+    ...new Set(
+        Menu.map((curElem) => {
+            return curElem.category;
+        })
+    ),
+    "All",
+]
 
 const Resturant = () => {
 
     const [menuData, setMenuData] = React.useState(Menu);
+    const [menuList, SetMenuList] = React.useState(uniqueList);
 
     const filteritem = (category) => {
+
+        if (category === "All") {
+            setMenuData(Menu);
+            return;
+        }
         const updateList = Menu.filter((curElem) => {
             return curElem.category === category;
         });
@@ -15,16 +31,7 @@ const Resturant = () => {
     }
     return (
         <>
-            <nav className='navbar'>
-                <div className='btn-group'>
-                    <button className='btn-group__item' onClick={() => setMenuData(Menu)}>All</button>
-                    <button className='btn-group__item' onClick={() => filteritem("breakfast")}>BreakFast</button>
-                    <button className='btn-group__item' onClick={() => filteritem("lunch")}>Lunch</button>
-                    <button className='btn-group__item' onClick={() => filteritem("evening")}>Evening</button>
-                    <button className='btn-group__item' onClick={() => filteritem("dinner")}>Dinner</button>
-                </div>
-
-            </nav>
+            <Navbar filteritem={filteritem} menuList={menuList} />
             < MenuCard menuData={menuData} />
         </>
     )
