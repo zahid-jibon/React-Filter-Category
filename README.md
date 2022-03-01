@@ -1,6 +1,6 @@
 # React-Filter-Category 🗽
 
-This app is about a filter restaurent menu by category using react. 🛩
+This app is about a filter restaurant menu by category using react. 🛩
 
 👉 [Click Here for Live Preview](https://filter-category.netlify.app/)
 
