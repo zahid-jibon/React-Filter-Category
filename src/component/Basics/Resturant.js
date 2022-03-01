@@ -1,8 +1,10 @@
 import React from 'react';
+import Footer from './footer';
 import Menu from './menuApi';
 import MenuCard from './MenuCard';
 import Navbar from './Navbar';
 import "./style.css";
+
 
 const uniqueList = [
     ...new Set(
@@ -33,6 +35,7 @@ const Resturant = () => {
         <>
             <Navbar filteritem={filteritem} menuList={menuList} />
             < MenuCard menuData={menuData} />
+            <Footer></Footer>
         </>
     )
 }

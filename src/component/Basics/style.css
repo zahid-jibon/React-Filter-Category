@@ -6,7 +6,7 @@
   }
   
   html {
-    background: #d4c2a2;
+    background: #151D3B;
     background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
@@ -213,5 +213,18 @@
   .btn-group__item--active:after {
     opacity: 1;
     transform: translatey(-2px);
+  }
+
+  /* Footer */
+
+  .card-footer {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 5px 0 20px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
   }
   
